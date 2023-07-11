@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.wor {
+      margin-left: 500px;
+      font-size: 24px;
+      
+}
+.wor2 {
+    margin-left: 80px;
+    margin-right:50px;
+    margin-top:26px;
+    font-size: 24px;
+}
+.wor3 {
+    margin-right:4px;
+    font-size: 24px;
+}
+   
+input[type="submit"] {
+    background-color: green;
+      color: white; 
+      font-size: 24px;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-left:30px
+           } 
+
+ table {
+     font-family: arial, sans-serif;
+     border-collapse: collapse;
+     width: 100%;
+       }
+
+ td, th {
+     border: 1px solid #000000;
+     text-align: center;
+      padding: 8px;
+       }
+
+ th {
+     background-color: #dddddd;
+    }
+ tr:nth-child(even) {
+     background-color: #f0f0f0;
+ }
+ .my-custom-button {
+    color: black;
+    background-color: white;
+    border: none;
+    font-size: 16px;
+
+}
