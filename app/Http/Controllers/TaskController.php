@@ -27,13 +27,13 @@ class TaskController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request) 
     {
         $driver=$request['driver'];
         $Quantity=$request['Quantity'];
         $amount=$request['amount'];
         $item=$request['item'];
-        $stat=" (ايقاف) تم الاستلام ";
+        $stat=" تم الاستلام ";
 
         if ($amount == 'liter') {
             $Quantity= $Quantity.'لتر' ;
@@ -42,10 +42,10 @@ class TaskController extends Controller
         }
 
         $result= Task::create([
-            "item"=>      "$item",
-            "Quantity"   =>"$Quantity",
-            'driver' =>  "$driver",
-            "stat"=>     "$stat"
+            "item"=>    $item,
+            "Quantity"   =>$Quantity,
+            'driver' =>  $driver,
+            "stat"=>     $stat
         ]
         );
 
