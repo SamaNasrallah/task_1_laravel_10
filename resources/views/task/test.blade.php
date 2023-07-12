@@ -73,13 +73,20 @@
 
         @foreach ($tasks as $task)
     <tr>
-        <td >      <form action="{{ route('tasks.update', $task->id) }}" method="POST">
-            @csrf
-            @method('PUT')
-            <button type="submit" class="btn btn-sm btn-danger my-custom-button">
-                {{ $task->stat }}
-            </button>
-        </form>  </td>
+        <td class="status-cell" >   
+            @if ($task->stat == " تم الاستلام ")
+                <form action="{{ route('tasks.update', $task->id) }}" method="POST">
+                    @csrf
+                    @method('PUT')
+                    <button type="submit" class="my-custom-button">
+                        ايقاف
+                    </button>
+                </form>
+            @endif
+
+            {{ $task->stat }}  
+            
+         </td>
         <td >{{ $task->driver }}</td>
         <td >{{ $task->Quantity }}</td>
         <td >{{ $task->item }}</td>
@@ -90,6 +97,7 @@
 
         </tbody>
     </table>
+
 
 
 </body>
